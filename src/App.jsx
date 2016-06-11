@@ -14,10 +14,16 @@ import 'style!css!sass!applicationStyles';
 //Launch foundation
 $(document).foundation();
 
+
+//App components
+import Navigation from 'Navigation';
+import Timer from 'Timer';
+import Countdown from 'Countdown';
+
 const App = (props) => {
     return (
         <div>
-            <p>App rendered.</p>
+            <Navigation />
             {props.children}
         </div>
     );
@@ -26,7 +32,8 @@ const App = (props) => {
 const routes = (
     <Router history={hashHistory}>
         <Route path="/" component={App}>
-
+            <IndexRoute component={Timer} />
+            <Route path="countdown" component={Countdown} />
         </Route>
     </Router>
 );

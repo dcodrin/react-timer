@@ -1,7 +1,7 @@
 {
   "name": "react-timer",
   "version": "1.0.0",
-  "description": "React timer and countdown.",
+  "description": "React timer with countdown.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

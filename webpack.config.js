@@ -29,7 +29,10 @@ module.exports = {
             //Example:
             //NameModule: 'path of own module to include'
             //NOTE: DO NOT USE ./
-            applicationStyles: 'src/styles/app.scss'
+            applicationStyles: 'src/styles/app.scss',
+            Navigation: 'src/components/Navigation.jsx',
+            Timer: 'src/components/Timer.jsx',
+            Countdown: 'src/components/Countdown.jsx'
         },
         extensions:['', '.js', '.jsx']
     },
