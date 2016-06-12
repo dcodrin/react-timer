@@ -1,0 +1,18 @@
+.countdown-form {
+  input:focus {
+    border: 1px solid $input-border-color;
+  }
+  button {
+    background-color: $btn-background;
+    &:hover {
+      background-color: $btn-background-hover;
+    }
+    &:focus {
+      background-color: $btn-background-hover;
+      outline: 0;
+    }
+    &:active {
+      transform: scale(1.02);
+    }
+  }
+}

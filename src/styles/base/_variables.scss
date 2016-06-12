@@ -12,3 +12,10 @@ $nav-link-color: $secondary-color;
 $clock-text-color: $secondary-color;
 $clock-bg-color: lighten($main-color, 10%);
 $clock-border-color: darken($secondary-color, 20%);
+
+//Input
+$input-border-color: darken($secondary-color, 20%);
+
+//Button
+$btn-background: $main-color;
+$btn-background-hover: lighten($main-color, 10%);
