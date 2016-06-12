@@ -26915,7 +26915,7 @@
 	                _react2.default.createElement(
 	                    'form',
 	                    { className: 'countdown-form', onSubmit: this.handleSubmit },
-	                    _react2.default.createElement('input', { ref: 'seconds', onChange: this.handleInputChange, value: this.state.seconds, type: 'text' }),
+	                    _react2.default.createElement('input', { ref: 'seconds', onChange: this.handleInputChange, value: this.state.seconds, placeholder: 'Enter number of seconds', type: 'text' }),
 	                    _react2.default.createElement(
 	                        'button',
 	                        { className: 'button expanded', type: 'submit' },
