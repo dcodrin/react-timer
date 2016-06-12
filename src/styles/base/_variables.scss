@@ -19,3 +19,8 @@ $input-border-color: darken($secondary-color, 20%);
 //Button
 $btn-background: $main-color;
 $btn-background-hover: lighten($main-color, 10%);
+
+//Control Buttons
+$btn-control-clear: #F32645;
+$btn-control-pause: #FDC42C;
+$btn-control-start: #BBD713;

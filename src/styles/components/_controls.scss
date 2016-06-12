@@ -1,0 +1,18 @@
+.controls {
+  display: flex;
+  justify-content: center;
+
+  .button {
+    padding: 0.75rem 3rem;
+    outline: 0;
+    &.primary {
+      background-color: $btn-control-start;
+    }
+    &.alert {
+      background-color: $btn-control-clear;
+    }
+    &.secondary {
+      background-color: $btn-control-pause;
+  }
+  }
+}
