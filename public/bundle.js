@@ -26327,7 +26327,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #4B1166; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar a {\n  color: #3FEFC1; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #4B1166; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar a {\n  color: #3FEFC1; }\n\n.clock {\n  align-items: center;\n  background-color: #6b1892;\n  border: 2px solid #3FEFC1;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: #3FEFC1;\n  font-size: 2.25rem;\n  font-weight: 300; }\n", ""]);
 	
 	// exports
 
@@ -26464,7 +26464,35 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
+	});
+	
+	var _react = __webpack_require__(7);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Clock = __webpack_require__(244);
+	
+	var _Clock2 = _interopRequireDefault(_Clock);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function (props) {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Clock2.default, { totalSeconds: 69 })
+	    );
+	};
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26481,33 +26509,51 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Countdown = function (_React$Component) {
-	  _inherits(Countdown, _React$Component);
+	var Clock = function (_React$Component) {
+	    _inherits(Clock, _React$Component);
 	
-	  function Countdown() {
-	    _classCallCheck(this, Countdown);
+	    function Clock() {
+	        _classCallCheck(this, Clock);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Countdown).apply(this, arguments));
-	  }
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Clock).call(this));
 	
-	  _createClass(Countdown, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'THIS IS COUNTDOWN'
-	      );
+	        _this.formatSeconds = _this.formatSeconds.bind(_this);
+	        return _this;
 	    }
-	  }]);
 	
-	  return Countdown;
+	    _createClass(Clock, [{
+	        key: "formatSeconds",
+	        value: function formatSeconds(totalSeconds) {
+	            var seconds = totalSeconds % 60;
+	            var minutes = Math.floor(totalSeconds / 60);
+	            return (minutes < 10 ? "0" + minutes : minutes) + " : " + (seconds < 10 ? "0" + seconds : seconds);
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "clock" },
+	                _react2.default.createElement(
+	                    "span",
+	                    { className: "clock-text" },
+	                    this.formatSeconds(this.props.totalSeconds)
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Clock;
 	}(_react2.default.Component);
 	
-	Countdown.propTypes = {};
-	Countdown.defaultProps = {};
+	Clock.propTypes = {
+	    totalSeconds: _react2.default.PropTypes.number
+	};
+	Clock.defaultProps = {
+	    totalSeconds: 0
+	};
 	
-	exports.default = Countdown;
+	exports.default = Clock;
 
 /***/ }
 /******/ ]);
