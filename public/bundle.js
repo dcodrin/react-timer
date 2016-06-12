@@ -26335,7 +26335,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #4B1166; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar a {\n  color: #3FEFC1; }\n\n.clock {\n  align-items: center;\n  background-color: #6b1892;\n  border: 2px solid #0fb98c;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem;\n  box-shadow: 0 0 8px #0fb98c; }\n\n.clock-text {\n  color: #3FEFC1;\n  font-size: 2.25rem;\n  font-weight: 300; }\n\n.countdown-form input:focus {\n  border: 1px solid #0fb98c; }\n\n.countdown-form button {\n  background-color: #4B1166; }\n  .countdown-form button:hover {\n    background-color: #6b1892; }\n  .countdown-form button:focus {\n    background-color: #6b1892;\n    outline: 0; }\n  .countdown-form button:active {\n    transform: scale(1.02); }\n\n.controls {\n  display: flex;\n  justify-content: center; }\n  .controls .button {\n    padding: 0.75rem 3rem;\n    outline: 0; }\n    .controls .button.primary {\n      background-color: #BBD713; }\n    .controls .button.alert {\n      background-color: #F32645; }\n    .controls .button.secondary {\n      background-color: #FDC42C; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #4B1166; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar a {\n  color: #3FEFC1; }\n\n.clock {\n  align-items: center;\n  background-color: #6b1892;\n  border: 2px solid #0fb98c;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem;\n  box-shadow: 0 0 8px #0fb98c; }\n\n.clock-text {\n  color: #3FEFC1;\n  font-size: 2.25rem;\n  font-weight: 300; }\n\n.countdown-form input:focus {\n  border: 1px solid #0fb98c; }\n\n.countdown-form button {\n  background-color: #4B1166; }\n  .countdown-form button:hover {\n    background-color: #6b1892; }\n  .countdown-form button:focus {\n    background-color: #6b1892;\n    outline: 0; }\n  .countdown-form button:active {\n    transform: scale(1.02); }\n\n.controls {\n  display: flex;\n  justify-content: center; }\n  .controls .button {\n    padding: 0.75rem 3rem;\n    outline: 0; }\n    .controls .button.primary {\n      background-color: #BBD713; }\n    .controls .button.alert {\n      background-color: #F32645; }\n    .controls .button.secondary {\n      background-color: #FDC42C; }\n\n.page-title {\n  margin: 2rem 0;\n  text-align: center; }\n", ""]);
 	
 	// exports
 
@@ -26604,6 +26604,11 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
+	                _react2.default.createElement(
+	                    'h1',
+	                    { className: 'page-title' },
+	                    'Countdown'
+	                ),
 	                _react2.default.createElement(_Clock2.default, { totalSeconds: this.state.totalSeconds }),
 	                renderControls()
 	            );
