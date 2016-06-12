@@ -2,7 +2,7 @@ var webpackConfig = require('./webpack.config.js');
 
 module.exports = function (config) {
     config.set({
-       browsers: ['Chrome'],
+        browsers: ['Chrome'],
         singleRun: true,
         frameworks: ['mocha'],
         files: ['src/tests/**/*.test.jsx'],
@@ -10,6 +10,7 @@ module.exports = function (config) {
             'src/tests/**/*.test.jsx': ['webpack', 'sourcemap']
         },
         reporters: ['mocha'],
+        //tell mocha to skip test after 5 seconds. return test failed
         client: {
             mocha: {
                 timeout: '5000'

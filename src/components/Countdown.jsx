@@ -1,16 +1,10 @@
 import React from 'react';
+import Clock from 'Clock';
 
-class Countdown extends React.Component {
-  render() {
+export default (props) => {
     return (
-      <div>
-        THIS IS COUNTDOWN
-      </div>
+        <div>
+            <Clock totalSeconds={69}/>
+        </div>
     );
-  }
-}
-
-Countdown.propTypes = {};
-Countdown.defaultProps = {};
-
-export default Countdown;
+};

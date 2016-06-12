@@ -7,3 +7,8 @@ $secondary-color: #3FEFC1;
 $nav-background: $main-color;
 $nav-text-color: $main-font-color;
 $nav-link-color: $secondary-color;
+
+//Clock
+$clock-text-color: $secondary-color;
+$clock-bg-color: lighten($main-color, 10%);
+$clock-border-color: $secondary-color;
