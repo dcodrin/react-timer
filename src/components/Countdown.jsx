@@ -23,8 +23,8 @@ class Countdown extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if(this.state.countdownStatus !== prevState.countdownStatus){
-            switch (this.state.countdownStatus){
+        if (this.state.countdownStatus !== prevState.countdownStatus) {
+            switch (this.state.countdownStatus) {
                 case 'started':
                     this.startTimer();
                     break;
@@ -38,10 +38,24 @@ class Countdown extends React.Component {
         }
     }
 
-    startTimer(){
+
+    componentWillUnmount() {
+        //Clear interval
+        clearInterval(this.timer);
+        this.timer = undefined;
+    }
+
+    startTimer() {
         this.timer = setInterval(() => {
             let secondsRemaining = this.state.totalSeconds - 1;
             this.setState({totalSeconds: secondsRemaining >= 0 ? secondsRemaining : 0});
+            if (secondsRemaining === 0) {
+                this.setState({
+                    countdownStatus: 'stopped',
+                    totalSeconds: 0
+                });
+
+            }
         }, 1000);
     }
 
@@ -68,8 +82,9 @@ class Countdown extends React.Component {
     render() {
         const {countdownStatus} = this.state;
         const renderControls = () => {
-            if(countdownStatus !== 'stopped'){
-                return (<Controls countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>);
+            if (countdownStatus !== 'stopped') {
+                return (
+                    <Controls countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>);
             } else {
                 return (<CountdownForm onSetCountdown={this.handleSetCountdown}/>);
             }
