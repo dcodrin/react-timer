@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Controls from 'Controls';
+
 class CountdownForm extends React.Component {
 
     constructor() {
