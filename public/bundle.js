@@ -26327,7 +26327,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #4B1166; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar a {\n  color: #3FEFC1; }\n\n.clock {\n  align-items: center;\n  background-color: #6b1892;\n  border: 2px solid #3FEFC1;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: #3FEFC1;\n  font-size: 2.25rem;\n  font-weight: 300; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #4B1166; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar a {\n  color: #3FEFC1; }\n\n.clock {\n  align-items: center;\n  background-color: #6b1892;\n  border: 2px solid #0fb98c;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem;\n  box-shadow: 0 0 8px #0fb98c; }\n\n.clock-text {\n  color: #3FEFC1;\n  font-size: 2.25rem;\n  font-weight: 300; }\n", ""]);
 	
 	// exports
 

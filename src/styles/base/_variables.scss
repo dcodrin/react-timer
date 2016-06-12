@@ -11,4 +11,4 @@ $nav-link-color: $secondary-color;
 //Clock
 $clock-text-color: $secondary-color;
 $clock-bg-color: lighten($main-color, 10%);
-$clock-border-color: $secondary-color;
+$clock-border-color: darken($secondary-color, 20%);
