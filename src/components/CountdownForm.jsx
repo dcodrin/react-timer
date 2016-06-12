@@ -30,7 +30,7 @@ class CountdownForm extends React.Component {
         return (
             <div>
                 <form className="countdown-form" onSubmit={this.handleSubmit}>
-                    <input ref="seconds" onChange={this.handleInputChange} value={this.state.seconds} type="text"/>
+                    <input ref="seconds" onChange={this.handleInputChange} value={this.state.seconds} placeholder="Enter number of seconds" type="text"/>
                     <button className="button expanded" type="submit">Start</button>
                 </form>
             </div>
