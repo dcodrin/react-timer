@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Router, IndexRoute, hashHistory} from 'react-router';
 
-//Load foundation
-//use css! loader to load css
-//use style! loader to inject css into html
-import 'style!css!foundation-sites/dist/foundation.min.css';
 
 //Load custom css using webpack aliases
 //Notice the usage of sass! loader

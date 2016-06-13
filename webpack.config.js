@@ -1,4 +1,6 @@
 var webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
     entry: [
         //load scripts before App.jsx, make use of the script-loader through 'script!'
@@ -55,6 +57,11 @@ module.exports = {
             contentBase: './public/',
             progress: true
         }
+    },
+    sassLoader: {
+        includePaths: [
+            path.resolve(__dirname, './node_modules/foundation-sites/scss')
+        ]
     },
     devtool: 'source-map'
 };
