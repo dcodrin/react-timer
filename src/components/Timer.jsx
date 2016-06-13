@@ -62,7 +62,4 @@ class Timer extends React.Component {
     }
 }
 
-Timer.propTypes = {};
-Timer.defaultProps = {};
-
 export default Timer;

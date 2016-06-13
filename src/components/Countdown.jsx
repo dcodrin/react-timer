@@ -100,7 +100,4 @@ class Countdown extends React.Component {
     }
 }
 
-Countdown.propTypes = {};
-Countdown.defaultProps = {};
-
 export default Countdown;

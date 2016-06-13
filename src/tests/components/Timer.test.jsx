@@ -50,7 +50,5 @@ describe('Timer', () => {
             expect(timer.state.timerStatus).toBe('stopped');
             done();
         }, 1001);
-
     });
-
 });
