@@ -26526,9 +26526,6 @@
 	    return Timer;
 	}(_react2.default.Component);
 	
-	Timer.propTypes = {};
-	Timer.defaultProps = {};
-	
 	exports.default = Timer;
 
 /***/ },
@@ -26843,9 +26840,6 @@
 	    return Countdown;
 	}(_react2.default.Component);
 	
-	Countdown.propTypes = {};
-	Countdown.defaultProps = {};
-	
 	exports.default = Countdown;
 
 /***/ },
@@ -26901,7 +26895,7 @@
 	            e.preventDefault();
 	            var seconds = this.state.seconds;
 	            // ^ match beginning; [0-9] any characters from 0-9; * match all; $ end with 0-9
-	            if (seconds.match(/^[0-9]*$/)) {
+	            if (seconds.match(/^[0-9]*$/) && seconds.length > 0) {
 	                this.props.onSetCountdown(Number(seconds));
 	                this.setState({ seconds: '' });
 	            }
@@ -26928,9 +26922,6 @@
 	
 	    return CountdownForm;
 	}(_react2.default.Component);
-	
-	CountdownForm.propTypes = {};
-	CountdownForm.defaultProps = {};
 	
 	exports.default = CountdownForm;
 
