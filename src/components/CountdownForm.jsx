@@ -20,7 +20,7 @@ class CountdownForm extends React.Component {
         e.preventDefault();
         const seconds = this.state.seconds;
         // ^ match beginning; [0-9] any characters from 0-9; * match all; $ end with 0-9
-        if(seconds.match(/^[0-9]*$/)) {
+        if(seconds.match(/^[0-9]*$/) && seconds.length > 0) {
             this.props.onSetCountdown(Number(seconds));
             this.setState({seconds: ''});
         }
