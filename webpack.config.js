@@ -12,7 +12,7 @@ module.exports = {
         //make jquery available globally through the var 'jQuery'
         jquery: 'jQuery'
     },
-    plugin: [
+    plugins: [
         //allows the usage of jquery module through '$' and 'jQuery' without importing the module
         new webpack.ProvidePlugin({
             //tell webpack to watch for '$' and 'jQuery' and replace those with jquery module
